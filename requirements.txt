@@ -1,0 +1,24 @@
+# RAG System Dependencies
+# Note: Versions compatible with Python 3.9
+# Document Processing
+PyMuPDF==1.24.13
+python-docx==1.1.2
+pypdf==4.3.1
+
+# Text Processing & Embeddings
+sentence-transformers==3.3.1
+langchain-text-splitters==0.3.2
+
+# Vector Database
+chromadb==0.5.23
+
+# LLM Integration
+ollama==0.4.4
+langchain-ollama==0.2.2
+
+# Web Interface (max version for Python 3.9)
+gradio==4.44.1
+
+# Additional Dependencies
+requests==2.32.3
+typing-extensions==4.12.2
